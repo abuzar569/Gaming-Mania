@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden
+}
+.navbar {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #7241FF;
+  position: relative;
+}
+
+.brand-title {
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggle-button .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s ease-out;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar-links li {
+  padding: 0 15px;
+}
+
+.navbar-links a {
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ffdf91;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .toggle-button {
+      display: flex;
+  }
+  .navbar-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background-color: #7241FF;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      overflow: hidden;
+      /* transition: max-height 0.5s ease-out; */
+  }
+
+  .navbar-links.active {
+      display: flex;
+      /* max-height: 300px; */
+  }
+
+  .navbar-links ul {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+
+  .navbar-links li {
+      padding: 10px 0;
+  }
+
+  .navbar-links a {
+      padding: 10px;
+      display: block;
+      width: 100%;
+  }
+}
+
+/* General Contact Section Styles */
+.contact-section {
+    padding: 60px 20px; /* Added more padding on top to accommodate the fixed navbar */
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.5em;
+    color: #7241FF;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    animation: scaleUp 0.6s ease-out;
+}
+
+/* Form Field Styles */
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #7241FF;
+    box-shadow: 0 0 5px rgba(114, 65, 255, 0.3);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #7241FF;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #5e2dcb;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 10px;
+    }
+
+    .contact-section h1 {
+        font-size: 2em;
+    }
+
+    .contact-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 30px 5px;
+    }
+
+    .contact-section h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

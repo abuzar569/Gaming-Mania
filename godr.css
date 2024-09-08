@@ -1,0 +1,296 @@
+/* styles.css */
+body {
+    font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+    background-color: #7241FF;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #7241FF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.game-logo {
+    max-width: 100%;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.features {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.features ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.features li {
+    margin: 10px 0;
+}
+
+.system-requirements {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.requirements {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.requirements-column {
+    flex: 1;
+}
+
+h2 {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.screenshots {
+    margin-bottom: 20px;
+}
+
+.screenshot-gallery {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.screenshot-gallery img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.buy-options {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.05);
+}
+
+.community {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.community-button {
+    display: inline-block;
+    background-color: #7241FF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.community-button:hover {
+    background-color: #5c2fbb;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #7241FF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/* Prices Section */
+.prices {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+    text-align: center;
+}
+
+.prices h2 {
+    color: #7241FF;
+    margin-bottom: 20px;
+}
+
+.price-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.8s ease-in-out forwards;
+    opacity: 0;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.price-card h3 {
+    color: #7241FF;
+    margin-bottom: 10px;
+}
+
+.price-card p {
+    margin: 10px 0;
+}
+
+.price-card .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.buy-button2 {
+    display: flex;
+    justify-content: center;
+    background-color: #7241FF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+
+}
+
+.buy-button2:hover {
+    background-color: #5c2fbb;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .price-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
